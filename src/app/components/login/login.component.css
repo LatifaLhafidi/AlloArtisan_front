@@ -1,0 +1,48 @@
+body {font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;}
+
+input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+  background-color: rgb(247, 247, 247);
+}
+
+button {
+    display: block;
+    margin: 40px auto;
+    background-color: rgb(14, 13, 13);
+    color: white;
+    font-size: 16px;
+    padding: 6px 15px;
+    font-size: 20px;
+
+}
+
+
+.container {
+  /* Ajouter box-sizing */
+  box-sizing : border-box;
+  border-radius:5px;
+  padding:20px;
+  width: 100%;
+  max-width: 440px;
+  margin:0 auto;
+margin-top: 80px;}
+
+h2  {
+  color: #131312;
+  width: 20%;
+  display: block;
+  font-style: italic;
+
+
+
+}

@@ -1,0 +1,45 @@
+.form-card1 {
+    box-sizing: border-box;
+    width: 30%;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background-color:rgb(232, 227, 227) ;
+    box-shadow: lightgray 4px 4px 20px;
+  }
+  ul#menu-list {
+    list-style-type: none;
+    font-size: 1em; 
+    font-family: Tahoma, Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
+    width:300px;
+    margin:25px 0 0 0;
+  }
+  .form-card2 {
+    
+    box-sizing: border-box;
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px 30px;
+    background-color:rgb(232, 227, 227) ;
+    box-shadow: rgb(147, 143, 143) 4px 4px 20px;
+  }
+  .vertical{
+    display: flex;
+  }
+  input ,select{
+    width: 70%;
+    
+  }
+
+  
+.form-group {
+    margin: 10px auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+button {
+    display: block;
+    margin: 20px auto;
+  }
