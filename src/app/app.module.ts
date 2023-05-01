@@ -7,10 +7,13 @@ import { HomeComponent } from './components/home/home.component';
 import { ArtisanListComponent } from './components/artisan-list/artisan-list.component';
 import { ArtisanComponent } from './components/artisan/artisan.component';
 import { InscriptionFormComponent } from './components/inscription-form/inscription-form.component';
-import { ConnexionFormComponent } from './components/connexion-form/connexion-form.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CoreModule } from './core/core.module';
 import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ListServiceComponent } from './components/list-service/list-service.component';
+import { ListBesoinsComponent } from './components/list-besoins/list-besoins.component';
+import { OffreComponent } from './components/offre/offre.component';
 
 
 
@@ -21,9 +24,13 @@ import { LoginComponent } from './components/login/login.component';
     ArtisanListComponent,
     ArtisanComponent,
     InscriptionFormComponent,
-    ConnexionFormComponent,
     ContactComponent,
     LoginComponent,
+    ProfileComponent,
+    ListServiceComponent,
+    ListBesoinsComponent,
+    OffreComponent,
+    
     
   ],
   imports: [

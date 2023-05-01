@@ -25,10 +25,7 @@
   .vertical{
     display: flex;
   }
-  input ,select{
-    width: 70%;
-    
-  }
+  
 
   
 .form-group {

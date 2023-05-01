@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConnexionFormComponent } from './connexion-form.component';
+import { ProfileComponent } from './profile.component';
 
-describe('ConnexionFormComponent', () => {
-  let component: ConnexionFormComponent;
-  let fixture: ComponentFixture<ConnexionFormComponent>;
+describe('ProfileComponent', () => {
+  let component: ProfileComponent;
+  let fixture: ComponentFixture<ProfileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConnexionFormComponent ]
+      declarations: [ ProfileComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ConnexionFormComponent);
+    fixture = TestBed.createComponent(ProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

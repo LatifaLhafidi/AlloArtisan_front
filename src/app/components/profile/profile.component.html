@@ -1,0 +1,14 @@
+<h2>profil</h2>
+<div class="container" *ngIf="profile as user">
+    <section class="mx-auto my-5" style="max-width: 23rem;">
+        
+      <div class="card testimonial-card mt-2 mb-3">
+        <div class="card-up aqua-gradient"></div>
+        <div class="card-body text-center">
+          <h4 class="card-title font-weight-bold">{{user.nom}} {{user.prenom}}</h4>
+          <hr>
+        </div>
+      </div>
+      
+    </section>
+  </div>

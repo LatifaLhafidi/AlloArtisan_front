@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
-import { UserProfil } from '../../core/modeles/userProfil';
 import { ListArtisanService } from '../../core/services/list-artisan.service';
 import { Observable } from 'rxjs';
+import { User } from 'src/app/core/modeles/user';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class ArtisanListComponent implements OnInit {
 
- artisan$!: Observable<UserProfil[]>;
+ artisan$!: Observable<User[]>;
 
 
  constructor(private listArtisanService :ListArtisanService){ }

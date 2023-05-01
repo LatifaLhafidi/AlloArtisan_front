@@ -1,13 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { UserProfil } from '../modeles/userProfil';
+import { Post } from '../modeles/post';
+import { User } from '../modeles/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthentificationServiceService {
   urlApi="http://localhost:8090"
+  
   headers = new HttpHeaders({'Access-Control-Allow-Origin' : '*'})
 
   constructor(private http: HttpClient) { }
@@ -19,9 +21,18 @@ export class AuthentificationServiceService {
   //       })
   //     );
   // }
-  ajouterUserProfil(user: UserProfil): Observable<UserProfil> {
-    return this.http.post <UserProfil>(`${this.urlApi}/ajouter`,user);
+  ajouterUserProfil(user: User): Observable<User> {
+    return this.http.post <User>(`${this.urlApi}/ajouter`,user);
   }
+  getUserById(userId:number): Observable<User>{
+    return this.http.get<User>(`http://localhost:8090/profil/${userId}`);
+      
+      
+ }
+ getUserByEmail(userEmail:string): Observable<User>{
+  return this.http.get<User>(`http://localhost:8090/users/${userEmail}`);
+    
+
 }
   
-  
+}

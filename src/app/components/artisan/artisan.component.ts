@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit,Input } from '@angular/core';
-import { UserProfil } from '../../core/modeles/userProfil';
 import { Router } from '@angular/router';
+import { User } from 'src/app/core/modeles/user';
 
 
 
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./artisan.component.css']
 })
 export class ArtisanComponent implements OnInit {
-@Input() artisan!:UserProfil;
+@Input() artisan!:User;
  constructor(private router: Router) { }
 
  ngOnInit(){

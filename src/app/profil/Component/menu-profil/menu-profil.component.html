@@ -6,6 +6,7 @@
                 <ul class="grid-2 alpha omega" id="menu-list">
                     <li routerLink="" ><a href="#">Mon profil</a></li>
                     <li><a >Mes offres</a></li>
+                    <li><a >Notification</a></li>
                     <li><a > Données personnelles</a></li>
                     <li><a  routerLink="post"> lancer une offres ou un besoin </a></li>
 
@@ -21,25 +22,50 @@
                     <h5>Voir et mettre à jour vos informations ici. Gérez vos identifiants et mots de passe ici. </h5>
 
                      <div class="vertical"> 
-                       <div>  <i class="bi bi-person-check-fill"></i></div> 
-                       <div> Nom</div> 
-                     </div>
-                     <div class="vertical"> 
-                        <div>  <i class="bi bi-telephone-forward-fill"></i>
-                        </div> 
-                        <div> Télephone</div> 
-                      </div>
-                      <div class="vertical"> 
-                        <div>  <i class="bi bi-envelope-check-fill"></i>
-                        </div> 
-                        <div> Votre adresse e-mail</div> 
-                      </div>
-                      <div class="vertical"> 
-                        <div>  <i class="bi bi-file-lock"></i>
+                      <form>
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="nom">
+                          </div>
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="prenom">
+                          </div><br><br>
+                        </div> <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="ville">
+                          </div>
+                          <div class="col">
+                            <input type="tel" class="form-control" placeholder="tel">
+                          </div><br> <br>
+                          
+                        </div> <div class="row">
+                          <div class="col">
+                            <input type="email" class="form-control" placeholder="Email">
+                          </div>
+                          <div class="col">
+                            <input type="password" class="form-control" placeholder="Mot de passe">
+                          </div>
+                          
+                        </div> <br>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="username">
+                        </div>
+                         Vous etés Artisant ? 
+                         <div class="col">
+                          <input type="text" class="form-control" placeholder="Artisant">
+                        </div> <br>
+                        <div class="col">
+                        <label for="avatar">Choisis votre photos de profi:</label>
                         
-                        </div> 
-                        <div>Votre mot de passe</div> 
-                      </div>
+                        <input type="file" >
+                        </div>
+                        
+                        <button type="submit">Enregistrer</button>
+
+                      </form>
+                        
+                       
+                       
             </div>
 
         </div>

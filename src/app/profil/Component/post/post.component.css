@@ -5,13 +5,13 @@
     color: aliceblue;
   }
   .form-card {
-    box-sizing: border-box;
     width: 50%;
+    height: 50%;
     margin: 20px auto;
     padding: 10px 30px;
     box-shadow: rgb(42, 52, 233) 4px 4px 20px;
-    margin-top: 60px;
-    background-color: rgb(42, 87, 135);
+    margin-top: 40px;
+    background-color: rgb(60, 61, 62);
   }
   
   .form-group {
@@ -22,8 +22,18 @@
     justify-content: space-between;
   }
   
-  input, textarea {
+ select, input, textarea {
     width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+    background-color: rgb(247, 247, 247);
   }
   
   .action-buttons {

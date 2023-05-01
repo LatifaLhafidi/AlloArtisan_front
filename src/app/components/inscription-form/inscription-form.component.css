@@ -1,33 +1,49 @@
-.form-card {
-  box-sizing: border-box;
-  width: 50%;
-  margin: 20px auto;
-  padding: 10px 30px;
-  box-shadow: lightgray 4px 4px 20px;
-  background-color: rgb(42, 87, 135);
-  margin-top: 100px;
+body {font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;}
 
-
-}
-
-.form-group {
-  margin: 10px auto;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-input, textarea {
-  width: 50%;
-}
-
-.action-buttons {
+select,input[type=password], input[type=email],input[type=text] {
   width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+  background-color: rgb(247, 247, 247);
 }
 
 button {
+    display: block;
+    margin: 40px auto;
+    background-color: rgb(14, 13, 13);
+    color: white;
+    font-size: 16px;
+    padding: 6px 15px;
+    font-size: 20px;
+
+}
+
+
+.container {
+  /* Ajouter box-sizing */
+  box-sizing : border-box;
+  border-radius:5px;
+  padding:20px;
+  width: 100%;
+  max-width: 440px;
+  margin:0 auto;
+ margin-top: 50px;
+}
+
+h2  {
+  color: #131312;
+  width: 20%;
   display: block;
-  margin: 20px auto;
-  background-color: rgb(172, 136, 136);
+  font-style: italic;
+
+
+
 }
