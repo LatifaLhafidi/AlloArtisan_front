@@ -1,16 +1,11 @@
 <div class="container">
-    <h2>Connexion</h2>
-    <form  [formGroup]=" FormConnexion">
-      <label for="email"></label>
-      <input type="text" id="email" name="firstname" placeholder="username" formControlName="login">
-  
-  
-      <label for="password"></label>
-      <input id="password" type="password" name="email" placeholder="Mot de  passe"  formControlName="password">
-  
-  
-      
-      <button  type="submit"   (click)="onAuthentifier()" [disabled]="FormConnexion.invalid" >Se connecter</button>
-    </form>
-  </div>
-  
+  <h2>Connexion</h2>
+  <form  [formGroup]=" FormConnexion">
+    <label for="userName"></label>
+    <input type="text" id="userName" name="userName" placeholder="userName" formControlName="userName">
+    <label for="password"></label>
+    <input id="password" type="password" name="password" placeholder="password"  formControlName="password">
+    <button  type="submit"   (click)="onAuthentifier()" [disabled]="FormConnexion.invalid" >Se connecter</button>
+    <div *ngIf="errorMessage && !authentifie" class="error-message">{{ errorMessage }}</div>
+  </form>
+</div>

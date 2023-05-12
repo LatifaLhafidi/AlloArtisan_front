@@ -4,10 +4,5 @@ export class User {
     userName!: string ;
     prenom!: string; 
     email!:string;
-    motdepass!:string;
-    isClient!:Boolean;
-    
-    
+    password!:string;
 }
-
-   

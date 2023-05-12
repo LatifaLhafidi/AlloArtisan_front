@@ -11,22 +11,24 @@ import { AuthentificationServiceService } from 'src/app/core/services/authentifi
 })
 export class InscriptionFormComponent implements OnInit {
   artisanForm !: FormGroup;
-  constructor(private formBuilder: FormBuilder, private router: Router, private liste: AuthentificationServiceService) { }
+  constructor(private formBuilder: FormBuilder,
+     private router: Router,
+     private liste: AuthentificationServiceService) { }
 
   ngOnInit(): void {
     this.artisanForm = this.formBuilder.group({
       nom: [null, Validators.required],
-      username: [null, Validators.required],
-
+      userName: [null, Validators.required],
       prenom: [null, Validators.required],
       email: [null, Validators.required],
-      motdepass: [null, Validators.required],
+      password: [null, Validators.required],
     });
 
   }
   onSubmitForm() {
 
-    this.liste.ajouterUserProfil(this.artisanForm.value).subscribe();
+    this.liste.ajouterUser(this.artisanForm.value).subscribe();
+    console.log(this.artisanForm.value);
     
     //this.liste.addRoleToUser
 

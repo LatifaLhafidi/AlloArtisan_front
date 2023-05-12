@@ -1,7 +1,9 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthentificationServiceService } from 'src/app/core/services/authentification-service.service';
+import { TokenStorageServiceService } from 'src/app/core/services/token-storage-service.service';
 
 @Component({
   selector: 'app-login',
@@ -9,28 +11,49 @@ import { AuthentificationServiceService } from 'src/app/core/services/authentifi
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  FormConnexion !:FormGroup;
+  headers = new HttpHeaders({'Access-Control-Allow-Origin' : '*'})
 
-  constructor( private router: Router ,private formBuilder: FormBuilder , private authService: AuthentificationServiceService,
-    ){}
+
+  FormConnexion !:FormGroup;
+ // urlApi="http://localhost:8090/authenticate";
+  errorMessage: string | null;
+  authentifie: boolean;
+
+  constructor( private router: Router ,private formBuilder: FormBuilder ,
+     private authService: AuthentificationServiceService, private tokenStorage: TokenStorageServiceService
+    ){
+      this.errorMessage = null;
+      this.authentifie = false;
+    }
  
  ngOnInit() : void {
   this.FormConnexion=this.formBuilder.group({
-    login: [null , Validators.required],
+    userName: [null , Validators.required],
     password: [null, Validators.required],
-
-
   })
  }
 
- onAuthentifier(){
-  this.router.navigateByUrl('login/user');
- // this.authService.login(this.FormConnexion.value);
+ onAuthentifier() {
+  this.errorMessage = null;
+  this.authentifie = false;
+ 
+    
+  this.authService.login(this.FormConnexion.value) 
+  .subscribe(data => {
+    console.log(data.token);
+    console.log(data);
 
-
- }
-
+    this.authentifie = true;
+    localStorage.setItem('access_token', data.token);
+    this.router.navigate(['login/user']);
+  },
+  error => {
+    console.error(error);
+    
+    // Gérer l'erreur de la requête
+    this.errorMessage= "Nom d'utilisateur ou mot de passe incorrect.";
+  }
+);
 }
-
-
+}
 

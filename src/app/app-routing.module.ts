@@ -5,7 +5,6 @@ import { ArtisanListComponent } from './components/artisan-list/artisan-list.com
 import { InscriptionFormComponent } from './components/inscription-form/inscription-form.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { ListServiceComponent } from './components/list-service/list-service.component';
 import { ListBesoinsComponent } from './components/list-besoins/list-besoins.component';
 
